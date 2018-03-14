@@ -1,0 +1,18 @@
+  .padding-15{
+  padding:15%;
+}
+
+.leftmenu{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #707BB9;
+  padding:10px;
+  cursor: pointer;
+  width: 12em;
+}
+
+.fa-img{
+  color: #CCCCCC;
+  padding-right: 7px;
+  font-size: 15px;
+}

@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+.footer-bottom ul,.four-box ul,.cl-brand ul,.cl-footer .cl-social,.cl-footer ul,.cl-sub-cat,.top-links ul,ul.bxslider {list-style: none}
+* { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+body,dd,div,dl,dt,h1,h2,h3,h4,h5,label,li,ol,p,span,strong,table,td,th,tr,ul { margin: 0; padding: 0}
+.clear {line-height: 0;font-size: 0; clear: both;height: 0}
+body {font-family: 'Source Sans Pro', sans-serif;font-size: 13px;color: #515151;background: #f3f5fc}
+* {box-sizing: border-box;-moz-box-sizing: border-box;-weblit-box-sizing: border-box}
+a, a:hover { text-decoration:none; }
+
+
+
+
+.header-top { background:#fff; height:90px; padding:0px 30px;}
+.header-top .logo { display:block; float:left; margin:5px 0px 0px 0px; }
+
+
+.header-right { float:right; padding:25px 0px 0px 0px; }
+.nav { float:left; display:block; }
+.nav li { float:left; display:block; }
+.nav li a { display:block; font-size:14px; padding:10px 20px ; color:#212121; margin:0px 10px; }
+.nav li a:hover ,.nav li.active a { background:#1f2b7f; border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px; color:#fff; } 
+
+
+.search { float:left;margin:2px 0px 0px 20px;  }
+.search input { display:block; background:url(../../../assets/images/search.png) no-repeat right 11px #f8f8f8; padding:10px 10px; line-height:20px; color:#212121; width:250px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; border:0;  }
+
+.setting { float:left; margin:14px 0px 0px 20px; }
+.user-icon { float:left; margin:2px 0px 0px 20px; }
+
+.container-in { display:block; padding:40px; }
+.container-in .heading { display:block; padding:0px 15px 20px; }
+.container-in .heading h2 { display:block; font-size:24px; font-weight:300; color:#1f2b7f; }
+
+
+.container-in .my-listing { display:block; }
+.container-in .my-listing ul { list-style:none; }
+
+.container-in .my-listing ul li { float:left; width:20%; padding:0px 15px; margin:0px 0px 40px 0px; }
+
+.container-in .my-listing ul li img { width:100%; display:block; }
+.container-in .my-listing ul li strong { background:#fff; padding:10px 20px; font-size:16px; color:#222; text-align:center; width:100%; display:block; font-weight:400; }
+
+
+
+
+
+.pro-project { background:#fff; min-height:500px; padding:30px; margin:0px 15px; }
+
+
+.pro-project-left { width:18%; float:left; }
+
+.pro-project-left ul { list-style:none; }
+.pro-project-left ul li { display:block;  }
+.pro-project-left ul li a { display:block; padding:13px 10px 13px 40px; font-size:15px; color:#1f2b7f; border-bottom:1px solid #ccc;}
+ .pro-project-left ul li a:hover  { background:#f1f1f1; color:#212121; }
+ .pro-project-left ul li.active a { color:#212121; }
+ .pro-project-left ul li.virtualtour a { background:url(../../../assets/images/icon.png) no-repeat 0px 5px; }
+.pro-project-left ul li.images a{ background:url(../../../assets/images/icon.png) no-repeat 0px -37px; }
+.pro-project-left ul li.project a{ background:url(../../../assets/images/icon.png) no-repeat 0px -79px; }
+
+.pro-project-left ul li:hover.virtualtour a { background:url(../../../assets/images/icon.png) no-repeat 0px 5px #f1f1f1; }
+.pro-project-left ul li:hover.images a { background:url(../../../assets/images/icon.png) no-repeat 0px -37px #f1f1f1; }
+.pro-project-left ul li:hover.project a { background:url(../../../assets/images/icon.png) no-repeat 0px -79px #f1f1f1; }
+
+.pro-project-right { width:80%; float:right; }
+
+  
+.pro-project-right ul { list-style:none; }
+
+.pro-project-right ul li { float:left; width:30%; margin:0px 25px 40px 0;   box-shadow:4px 4px 14px #eee;  -moz-box-shadow:4px 4px 14px #eee; -webkit-box-shadow:4px 4px 14px #eee;}
+
+.pro-project-right ul li img { width:100%; display:block; }
+.pro-project-right ul li strong { background:#fff; padding:10px 20px; font-size:16px; color:#222; text-align:center; width:100%; display:block; font-weight:400; }
+
+
+
+
+
+
+
+
+
+.footer { display:block; position:relative; }
+.footer .chat { position:fixed; bottom:0; right:50px; background:url(../../../assets/images/chat.png) no-repeat 18px 14px #1f2b7f; width:220px; padding:5px 30px 5px 50px; font-size:14px; line-height:40px; color:#fff; border-radius:15px 15px 0px 0px; -moz-border-radius:15px 15px 0px 0px; -webkit-border-radius:15px 15px 0px 0px; }
+
+
+
+

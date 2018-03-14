@@ -1,0 +1,76 @@
+
+<section class="properties-details">
+  <div class="containerd">
+    <div class="properties-name">
+      <a style="cursor:pointer">
+        <app-property-name></app-property-name>
+      </a>
+
+    </div>
+    <div [ngClass]="{'properties-view': isShowPropertyClass }" id="propertiesView">
+      <app-property-left-navbar></app-property-left-navbar>
+      <div class="virtual-tour">
+        <h5>virtual tour</h5>
+        <div class="multiple-scenes view-control-buttons">
+
+          <div id="pano">
+            <div id="titleBar">
+              <span class="sceneName"></span>
+              <a id="autorotateToggle">
+                <img class="icon off marg-head" alt="logo" [src]="'assets/images/play.png'">
+                <img class="icon on marg-head" [src]="'assets/images/pause.png'">
+              </a>
+
+              <a id="fullscreenToggle" (click)="isShowPropertyClass = !isShowPropertyClass">         
+                <img  class="icon off marg-head2" [src]="'assets/images/fullscreen.png'">                     
+                 <img class="icon on marg-head2" [src]="'assets/images/windowed.png'">
+              </a>
+            </div>
+
+            <a  id="viewUp" class="viewControlButton viewControlButton-1 zindex">
+                                        <img class="icon" [src]="'assets/images/up.png'">
+                                         </a>
+            <a  id="viewDown" class="viewControlButton viewControlButton-2 zindex">
+                                        <img class="icon" [src]="'assets/images/down.png'">
+                                          </a>
+            <a  id="viewLeft" class="viewControlButton viewControlButton-3 zindex">
+                                        <img class="icon" [src]="'assets/images/left.png'">
+                                         </a>
+            <a  id="viewRight" class="viewControlButton viewControlButton-4 zindex">
+                                         <img class="icon" [src]="'assets/images/right.png'">
+                                        </a>
+            <a  id="viewIn" class="viewControlButton viewControlButton-5 zindex">
+                                          <img class="icon" [src]="'assets/images/plus.png'">
+                                          </a>
+            <a  id="viewOut" class="viewControlButton viewControlButton-6 zindex">
+                                        <img class="icon" [src]="'assets/images/minus.png'">
+                                        </a>
+
+
+            <div id="map" style=" z-index: 1;
+            width: 35%;
+             height: 24%;
+             float: right; 
+             top: 74%;
+             position: inherite; 
+             overflow: hidden;">
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="containerd footer">
+        <div class="support-chat fixed">
+            <i class="fa fa-commenting-o"></i>
+            <span>live support chat</span>
+        </div>
+    </div>
+</footer>

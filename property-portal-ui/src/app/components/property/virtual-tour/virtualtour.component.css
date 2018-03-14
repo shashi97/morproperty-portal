@@ -1,0 +1,41 @@
+.ui{
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    /* display: flex; */
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    margin-left: 3%;
+    margin-top: 4% !important;
+}
+.body{
+    /* width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: auto !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 16px; */
+    background-color: #fff !important;
+    color: #fff !important;
+}
+h2{
+     display: block !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    color: #1f2b7f !important;
+}
+
+.map-class{
+    z-index: 1;
+     width: 35%;
+      height: 24%;
+      float: right; 
+      top: 74%;
+      position: inherite; 
+      overflow: hidden;
+}
+.zindex{
+    z-index: 3000;
+}

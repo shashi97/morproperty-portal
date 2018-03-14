@@ -1,0 +1,60 @@
+<!-- <div class="container-in">
+  <div class="heading">
+    <app-property-name></app-property-name>
+    <div class="clear"></div>
+  </div>
+
+  <div class="pro-project" >
+    <app-property-left-navbar></app-property-left-navbar>
+    <div class="pro-project-right">
+      <div class="heading">
+        <h2>Photo Gallery</h2>
+        <div class="clear"></div>
+      </div>
+      <div id="gallery" style="width:100%" *ngIf="propertyImages.length>0">
+        <a *ngFor="let property of propertyImages">
+          <img alt="" src="{{property.url}}" style="display:none" *ngIf="property.url">
+          <img alt="" src="../../assets/images/no-image.png" style="display:none" *ngIf="!property.url">
+        </a>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div> -->
+
+
+
+<section class="properties-details">
+    <div class="containerd">
+        <div class="properties-name">
+            <a style="cursor:pointer">
+                <app-property-name></app-property-name>
+            </a>
+            
+        </div>
+        <div class="properties-view">
+            <app-property-left-navbar></app-property-left-navbar>
+           
+            <div  class="prop-images">
+                <div class="images">
+                <h5>Photo gallery</h5>
+                <div id="gallery"  *ngIf="propertyImages.length>0">
+                    <a *ngFor="let property of propertyImages" >
+                      <img style="height:100px" alt="" src="{{property.url}}" style="display:none" *ngIf="property.url">
+                      <img style="height:100px" alt="" src="../../assets/images/no-image.png" style="display:none" *ngIf="!property.url">
+                    </a>
+                  </div>     
+                </div>             
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="containerd footer">
+        <div class="support-chat fixed">
+            <i class="fa fa-commenting-o"></i>
+            <span>live support chat</span>
+        </div>
+    </div>
+</footer>

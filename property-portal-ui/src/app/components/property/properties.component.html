@@ -1,0 +1,51 @@
+
+<!-- <div class="container-in">
+	<div class="heading">
+    	<h2 class="font-weight-bold">My Properties</h2>
+    	<div class="clear"></div>
+    </div>
+    
+    <div class="my-listing">
+    	<ul>
+        	<li *ngFor="let props of properties">
+            	<a (click)="onClickProperty(props)" style="cursor:pointer">
+                  <img src="{{props.thumbUrl}}" *ngIf="props.thumbUrl" style="height: 150px;">
+                  <img  src="../../assets/images/no-image.png" *ngIf="!props.thumbUrl" style="height: 150px;"> 
+                    <strong class="box-shadow">{{props.Name}}</strong>
+                </a>
+            </li>
+           
+        </ul>
+    </div>
+    
+    
+</div> -->
+
+
+<section class="my-properties">
+        <div class="containerd">
+            <h5>my properties</h5>
+            <div class="items">
+                <div class="properties-item" *ngFor="let props of properties">
+                    <a (click)="onClickProperty(props)" style="cursor:pointer">
+                        <div class="pic">
+                                <img src="{{props.thumbUrl}}" *ngIf="props.thumbUrl"  alt="project">
+                                <img  src="../../assets/images/no-image.png" *ngIf="!props.thumbUrl"  alt="project"> 
+                            <!-- <img src="../images/proj1.jpg" alt="project"> -->
+                            <div class="overlay"></div>
+                        </div>
+                        <p>{{props.Name}}</p>
+                    </a>
+                </div>            
+            </div>            
+        </div>
+    </section>
+    <footer>
+        <div class="containerd footer">
+            <div class="support-chat fixed">
+                <i class="fa fa-commenting-o"></i>
+                <span>live support chat</span>
+            </div>
+        </div>
+    </footer>
+    

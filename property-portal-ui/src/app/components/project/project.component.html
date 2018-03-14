@@ -1,0 +1,49 @@
+<section class="my-projects">
+    <div class="containerd">
+        <h5>Current Projects</h5>
+        <span *ngFor="let props of projects">
+
+            <span class=" items projects-item" *ngIf="props.StatusID !==9">
+                <a (click)="onClickProject(props)" style="cursor:pointer">
+                    <div class="pic">
+
+                        <img src="../../assets/images/no-image.png" *ngIf="!props.thumbUrl">
+                        <img src="{{props.thumbUrl}}" *ngIf="props.thumbUrl">
+                        <div class="overlay"></div>
+                    </div>
+                    <p>{{props.LeadName}}</p>
+                </a>
+            </span>
+
+        </span>
+
+    </div>
+
+    <div class="containerd">
+        <h5>Past Projects</h5>
+        <span *ngFor="let props of projects">
+
+            <span class=" items projects-item" *ngIf="props.StatusID ===9">
+                <a (click)="onClickProject(props)" style="cursor:pointer">
+                    <div class="pic">
+
+                        <img src="../../assets/images/no-image.png" *ngIf="!props.thumbUrl">
+                        <img src="{{props.thumbUrl}}" *ngIf="props.thumbUrl">
+                        <div class="overlay"></div>
+                    </div>
+                    <p>{{props.LeadName}}</p>
+                </a>
+            </span>
+
+
+        </span>
+    </div>
+</section>
+<footer>
+    <div class="containerd footer">
+        <div class="support-chat fixed">
+            <i class="fa fa-commenting-o"></i>
+            <span>live support chat</span>
+        </div>
+    </div>
+</footer>

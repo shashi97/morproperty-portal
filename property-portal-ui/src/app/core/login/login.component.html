@@ -1,0 +1,60 @@
+
+
+<div >
+  <div class="col-md-offset-8 col-md-4" style="margin-left: 33%; padding-top: 4%;">
+    <div class="panel panel-dark panel-flat">
+      <div class="panel-heading text-center">
+
+        <div class="logobox">
+          <a>
+
+            <img class="logosize" src="assets/images/header_logo.png" alt="alt">
+          </a>
+        </div>
+      </div>
+      <div class="panel-body">
+        <p class="text-center">Foreman's</p>
+        <!-- <form role="form" novalidate="" class="mb-lg smart-form ng-pristine ng-invalid ng-invalid-required" method="post" id="login-form"> -->
+          <form class="form-block ">
+
+        <span style="color: red"></span>
+
+
+        <div class="form-group has-feedback">
+
+          <input type="text" class="form-control login-control-height ng-pristine ng-invalid ng-invalid-required" placeholder="Username"
+          [(ngModel)]="model.UserName" name="username"  required="" autofocus="" style="height:30px">
+
+
+
+
+          <b *ngIf="isUserNameEmpty && model.UserName == ''" style="color:#cc5252;">
+            <i class="fa fa-user txt-color-teal"></i>  Username required!</b>
+        </div>
+        <div class="form-group has-feedback">
+
+
+          <input type="password" class="form-control login-control-height ng-pristine ng-invalid ng-invalid-required" placeholder="Password"
+          [(ngModel)]="model.Password" name="password" required="" style="height:30px">
+
+          <b *ngIf="isPasswordEmpty && model.Password == ''" style="color:#cc5252;">
+            <i class="fa fa-user txt-color-teal"></i>  Password required!</b>
+        </div>
+
+        <div class="form-group has-feedback">
+          <input type="checkbox"  class="ng-pristine ng-valid">
+          <span style=" font-size:12px">Remember Me</span>
+        </div>
+        <b *ngIf="isInvalid && err != ''" style="color:#cc5252;">
+          Invalid username or password</b>
+        <button class="btn btn-md btn-info btn-block" [disabled]="loading" type="submit" (click)="login()">Login</button>
+      
+
+        <!-- </form> -->
+      </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>

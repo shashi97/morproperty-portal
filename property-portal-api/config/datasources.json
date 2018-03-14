@@ -1,0 +1,12 @@
+{
+  "cb": {
+    "host": "192.168.1.110",
+    "port": 1433,
+    "url": "",
+    "database": "loopBackDemo",
+    "password": "sa$123",
+    "name": "cb",
+    "user": "sa",
+    "connector": "mssql"
+  }
+}

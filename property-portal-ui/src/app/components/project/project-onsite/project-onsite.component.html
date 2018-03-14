@@ -1,0 +1,92 @@
+<!-- <div class="container-in">
+  <div class="heading">
+    <app-project-name></app-project-name>
+    <div class="clear"></div>
+  </div>
+
+  <div class="pro-project">
+    <app-project-left-navbar></app-project-left-navbar>
+
+    <div class="pro-project-right">
+      <div class="heading">
+        <h2>Whos on the Site</h2>
+        <div class="clear"></div>
+      </div>
+      <div class="ui-g" style="margin-top:0px">
+        <div class="ui-g-3" *ngFor="let props of projectOnsiteList" style="padding-bottom:3%">
+
+          <img *ngIf="props.EmployeeImage" [src]="onSrc(props.EmployeeImage)" style="height:95px;width:95px;border-radius:50%">
+          <img *ngIf="!props.EmployeeImage" src="../../assets/images/no-image.png" style="height:95px;width:95px;border-radius:50%">
+
+          <div class="name">{{props.EmployeeName}}</div>
+          <div class="profile">{{props.KeyTrade}}</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+
+</div> -->
+
+
+
+<section class="projects-details">
+  <div class="containerd">
+    <div class="project-name">
+      <a style="cursor:pointer">
+        <app-project-name></app-project-name>
+      </a>
+    </div>
+    <div class="project-view">
+      <app-project-left-navbar></app-project-left-navbar>
+
+      <div class="people">
+        <h5>whos on the site</h5>
+        <div class="row person">
+          <div class="col-md-4 col-6" *ngFor="let props of projectOnsiteList">
+            <div class="per">
+              <img *ngIf="props.EmployeeImage" [src]="onSrc(props.EmployeeImage)" height="95" width="95">
+              <img *ngIf="!props.EmployeeImage" src="assets/images/no-image.png" height="95" width="95">
+              <!-- <img src="../images/person1.jpg" alt="user"> -->
+              <!-- <div class="circle on"></div> -->
+              <div class="circle on" *ngIf="props.EndTime === '0:00'"></div>
+              <div class="circle off" *ngIf="props.EndTime !=='0:00'"></div>
+
+
+            </div>
+            <div class="details">
+              <span class="bold">{{props.EmployeeName}}</span>
+              <p>{{props.KeyTrade}}</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="on-off">
+        <ul>
+          <li>
+            <div class="circle on"></div>
+            <span>showing current onsite</span>
+          </li>
+          <li>
+            <div class="circle off"></div>
+            <span>showing current not onsite</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="containerd footer">
+    <div class="support-chat fixed">
+      <i class="fa fa-commenting-o"></i>
+      <span>live support chat</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="containerd nav-cont">
+    <a class="navbar-brand" href="#">
+      <img [src]="'assets/images/logo.png'" alt="National Decorators Logo">
+    </a>
+    <button class="horizontal">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <div class="toggle-horizontal-pc ml-auto">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item" *ngFor="let header of headerMenu" (click)="onClickHeaderMenu(header)" [ngClass]="{'active': header.isActive}">
+          <a class="nav-link" style="cursor: pointer">{{header.headerName}}</a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="toggle-horizontal-mob ml-auto">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngFor="let header of headerMenu" (click)="onClickHeaderMenu(header)">
+          <a class="nav-link" style="cursor: pointer">{{header.headerName}}
+
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-nav">
+      <ul class="navbar-nav">
+        <li>
+          <form class="form-pc">
+            <input class="form-nav" type="search" placeholder="Search..." aria-label="Search">
+            <button class="search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </li>
+        <li>
+          <button class="set">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </button>
+        </li>
+
+        <div class="user-icon">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="" data-toggle="dropdown">
+                <span (click)="OnImageClick()">
+                  <img [src]="'assets/images/no-image.png'" width="40" height="40">
+                </span>
+              </a>
+
+
+              <ul [ngClass]="{'dropdown-menu': isShowDropdown , 'dropdown-menu-click': !isShowDropdown }" id="signout">
+
+                <li>
+                  <a class="text" (click)="onSignOut()">Sign Out </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <div class="mobile-icons">
+      <div class="setting-mob">
+        <button>
+          <i class="fa fa-cog" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="search-mob">
+        <button data-toggle="collapse" data-target="#search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+        <div id="search" class="collapse">
+          <form class="form-mob">
+            <input class="form-nav" type="search" placeholder="Search..." aria-label="Search">
+            <button class="search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="dots-mob">
+        <button>
+          <i class="fa fa-ellipsis-h" (click)="OnImageClick()" aria-hidden="true"></i>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="" data-toggle="dropdown">
+                <!-- <span >
+                  <img [src]="'assets/images/user-icon.png'" width="40" height="40">
+                </span> -->
+              </a>
+              <ul [ngClass]="{'dropdown-menu': isShowDropdown , 'dropdown-menu-click': !isShowDropdown }" id="signout">
+
+                <li>
+                  <a class="text" (click)="onSignOut()">Sign Out </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</nav>

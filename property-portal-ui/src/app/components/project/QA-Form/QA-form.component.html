@@ -1,0 +1,78 @@
+<!-- <div class="container-in">
+  <div class="heading">
+    <app-project-name></app-project-name>
+    <div class="clear"></div>
+  </div>
+  <div class="pro-project">
+    <app-project-left-navbar></app-project-left-navbar>
+    <div class="pro-project-right">
+      <div class="heading">
+        <h2>QA/Forms</h2>
+        <div class="clear"></div>
+      </div>
+      <ul>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+ -->
+
+
+
+<section class="projects-details">
+    <div class="containerd">
+        <div class="project-name">
+            <a style="cursor:pointer">
+                <app-project-name></app-project-name>
+            </a>
+        </div>
+        <div class="project-view">
+            <app-project-left-navbar></app-project-left-navbar>
+
+            <div class="qa-forms scrollbar">
+                <h5>QA forms</h5>
+
+
+                <div class="form" style="    margin-top: 12px;" *ngFor="let project Of projectOnsiteList ; let i = index;">
+                    <span class="bold" style="margin-top:33px">{{project.JobFormName}}</span>
+
+                    <button type="button" data-toggle="collapse" data-target="#demo" (click)="project.isCollapsed=!project.isCollapsed">
+                        <i class="fa fa-sort-desc" aria-hidden="true" *ngIf="!project.isCollapsed"></i>
+                        <i class="fa fa-sort-up" aria-hidden="true" *ngIf="project.isCollapsed"></i>
+
+                    </button>
+
+                    <div *ngIf="project.isCollapsed">
+
+                        <div *ngIf="project.Attachments.length > 0">
+                            <div *ngFor="let attachment Of project.Attachments ">
+                                <a style="color: blue;cursor: pointer;" (click)="onAttachmentClick(attachment)">
+                                    <img src="assets/images/pdf.png" alt="pdf"> {{attachment.name}}
+                                </a>
+
+                            </div>
+                        </div>
+                        <div *ngIf="project.Attachments.length == 0">
+                            No Attachment..!
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="containerd footer">
+        <div class="support-chat fixed">
+            <i class="fa fa-commenting-o"></i>
+            <span>live support chat</span>
+        </div>
+    </div>
+</footer>

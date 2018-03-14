@@ -1,0 +1,142 @@
+<!-- <div class="ui-g-12 ui-md-2" style="height: 78%;margin-top: 3%; margin-left: 3%; width: 18%;">
+  <h2 class="a" style="padding: 7% 0px 4% 24px; display: block !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    color: #1f2b7f !important;">
+    Map View
+  </h2>
+
+  <h5 class="a" style=" padding:5% 0 0% 27px; color: black;" *ngIf="mapViewModel.isProject">
+    My Project
+  </h5>
+
+  <h5 class="a" style=" padding:5% 0 4% 24px;    color: black;" *ngIf="!mapViewModel.isProject">
+    My Property
+  </h5>
+  <h5 class="a" style=" padding:5% 0 4% 24px;    color: black;  font-size: 20px ">
+    {{mapViewModel.name}}
+  </h5>
+
+  <div class="a" style=" padding:7% 0 4% 24px">
+    <img src="../../assets/images/no-image.png" width="170" height="112" *ngIf="!mapViewModel.imageUrl">
+    <img src="{{mapViewModel.imageUrl}}" width="170" height="112" *ngIf="mapViewModel.imageUrl">
+  </div>
+
+  <div class="a" style=" color: black;     padding-left: 11%;padding-bottom: 3%; ">
+    <img src="../../assets/images/navigation.png" style="margin-bottom: -3%;"> Acacla Bay Rd
+  </div>
+  <div class="nav" style=" padding:5% 0 4% 13px; ">
+    <ul>
+      <li class="active" style="width:155% ; text-align:center">
+        <span (click)="onViewDetailsClick()"><a>View Details</a></span>
+      </li>
+    </ul>
+  </div>
+
+  <hr style="margin-top: 63%;margin-bottom: 6px;border: 0;border-top: 2px solid #eee;">
+
+  <div class="ui-g">
+    <div class="ui-g-6 ">
+      <div class="ui-g-1 ">
+        <div id="circle-green">
+        </div>
+      </div>
+      <div class="ui-g-11 ">
+        My Project
+      </div>
+
+    </div>
+
+    <div class="ui-g-6 ">
+        <div class="ui-g-1 ">
+          <div id="circle-blue">
+          </div>
+        </div>
+        <div class="ui-g-11 ">
+            My Property
+        </div>
+  
+      </div>
+
+
+
+  </div>
+
+  <h5 class="a" style="padding-left:18px" >
+      Select map my project or my properties to view the details.
+    </h5>
+
+</div>
+
+
+<div class="ui-g-12 ui-md-10 ui-g-nopad" style="height: 78%;margin-top: 3%;margin-left: 3%;width: 73%;">
+  <div id="map" style="width: 98%; height: 98%; left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;"></div>
+</div> -->
+
+
+
+<section class="map">
+  <div class="containerd">
+    <div class="row">
+
+      <div class="col-md-4 col-xs-12">
+        <div class="map-view ">
+          <h5>map view</h5>
+          <div class="map-project">
+            <p *ngIf="mapViewModel.isProject">my projects</p>
+            <p *ngIf="!mapViewModel.isProject">my property</p>
+
+            <p class="bold">{{mapViewModel.name}}</p>
+
+            <img src="../../assets/images/no-image.png" width="170" height="112" *ngIf="!mapViewModel.imageUrl">
+            <img src="{{mapViewModel.imageUrl}}" width="170" height="112" *ngIf="mapViewModel.imageUrl">
+            <!-- <img src="images/proj6.jpg" alt="image"> -->
+            <i class="fa fa-map-marker"></i>
+            <span>acala bay rd</span>
+            <a (click)="onViewDetailsClick()">view details</a>
+            <hr>
+          </div>
+          <div class="map-description">
+            <div class="marker-1">
+              <i class="green fa fa-circle"></i>
+              <span>my projects</span>
+            </div>
+            <div class="marker-2">
+              <i class="blue fa fa-circle"></i>
+              <span>my properties</span>
+            </div>
+            <p>Select map my project or my properites to view the details</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="themap col-md-8 col-xs-12">
+        <div id="map">
+
+        </div>
+      </div>
+      <div class="map-project-mob">
+        <div class="details">
+          <p>my projects</p>
+          <i class="fa fa-close"></i>
+        </div>
+        <p class="bold">papanui high school</p>
+        <i class="fa fa-map-marker"></i>
+        <span>acala bay rd</span>
+        <img src="images/proj6.jpg" alt="image">
+        <a href="html/my-projects.html">view details</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="containerd footer">
+    <div class="support-chat fixed">
+      <i class="fa fa-commenting-o"></i>
+      <span>live support chat</span>
+    </div>
+  </div>
+</footer>

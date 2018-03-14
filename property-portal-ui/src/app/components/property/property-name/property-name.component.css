@@ -1,0 +1,11 @@
+.back {
+  padding-right: 6px;
+  width: 20px;
+}
+.name {
+  font-family: sans-serif !important;
+  color: #929394 !important;
+  /*font-weight: BOLD !important;*/
+  font-size: 15px !important;
+  font-stretch: ultra-expanded !important;
+}

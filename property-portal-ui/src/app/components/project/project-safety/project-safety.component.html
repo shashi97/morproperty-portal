@@ -1,0 +1,128 @@
+<!-- <div class="container-in">
+  <div class="heading">
+    <app-project-name></app-project-name>
+    <div class="clear"></div>
+  </div>
+  <div class="pro-project">
+    <app-project-left-navbar></app-project-left-navbar>
+    <div class="pro-project-right">
+      <div class="heading">
+        <h2>Safety</h2>
+        <div class="clear"></div>
+      </div>
+
+      <div class="ui-g-12">
+        <div class="ui-g-12 m-l-9">
+          <ul>
+            <li *ngFor="let props of projectSaftyList" style="padding-bottom: 1%;width: 100px;background-color: #F1F1F1;box-shadow: 0px 0px 14px #eee;word-wrap: break-word;border: 1px solid #e4e6e8;">
+              <a href="{{props.url}}" target="_blank">
+                <img src="{{props.fileTypeUrl}}" style="border-bottom: 1px solid #e4e6e8;background: white;padding: 15%;" >
+                <strong style="background: #F1F1F1;padding: 10px 0px 0px 0px;">{{props.name}}</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="heading" style="padding: 0px 15px 2px;">
+        <h2>Induction</h2>
+        <div class="clear"></div>
+      </div>
+
+      <div class="ui-g-12" style="width:109%">
+        <div class="ui-g-3" *ngFor="let props of projectInductionRegisterList">
+          <div class=" ui-g-3" *ngIf="!props.EmployeeImage">
+            <img src="../../assets/images/no-image.png" style="height:44px;width:44px;border-radius:50%">
+          </div>
+          <div class=" ui-g-3" *ngIf="props.EmployeeImage">
+            <img [src]="onSrc(props.EmployeeImage)" style="height:44px;width:44px;border-radius:50%">
+          </div>
+
+          <div class="ui-g-9" style="padding-left:0px">
+            <div class="font ui-g-12" style="font-size:14px;word-wrap: break-word">{{props.EmployeeName}}</div>
+            <div class="font ui-g-12">Inducted On
+              <b style="font-weight: 700;word-wrap: break-word">{{props.InductedDateTime | date:"MM/dd/yyyy"}}</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+</div> -->
+
+
+
+<section class="projects-details">
+  <div class="containerd">
+    <!-- <div class="project-name"> -->
+    <a style="cursor:pointer">
+      <app-project-name></app-project-name>
+    </a>
+    <!-- </div> -->
+    <div class="project-view" style="height:100%">
+      <app-project-left-navbar></app-project-left-navbar>
+
+      <div class="safety">
+        <h5>safety</h5>
+        <div class="safety-pdf" *ngFor="let props of projectSaftyList">
+          <div class="row">
+            <div class="item col-sm-2 col-6" style="height: 100%;">
+              <a href="{{props.url}}" target="_blank">
+                <img src="{{props.fileTypeUrl}}" height="45" width="45">
+                <p style="margin-top:-9px;font-size: 19px;word-wrap: break-word">{{props.name}}</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="safety-register">
+          <h6>induction register</h6>
+          <div class="row">
+            <!-- <div class="col-sm-3 col-6">
+              <div *ngFor="let props of projectInductionRegisterList">
+                <div *ngIf="!props.EmployeeImage">
+                  <img src="../../assets/images/no-image.png" alt="user">
+                </div>
+                <div  *ngIf="props.EmployeeImage">
+                  <img [src]="onSrc(props.EmployeeImage)" alt="user">
+                </div>
+                <div class="register-details">
+                  <p>{{props.EmployeeName}}</p>
+                  <p>{{props.InductedDateTime | date:"MM/dd/yyyy"}}</p>
+                </div>
+              </div>
+
+            </div> -->
+            <!-- <div> -->
+            <div class="col-sm-4 col-6" *ngFor="let props of projectInductionRegisterList" style="padding-bottom: 3%;">
+              <img *ngIf="!props.EmployeeImage" src="assets/images/no-image.png" style="margin-bottom: -5%;">
+              <img *ngIf="props.EmployeeImage" [src]="onSrc(props.EmployeeImage)" style="margin-bottom: -5%;">
+              <div class="register-details">
+                <p>{{props.EmployeeName}}</p>
+                <p>inducted on {{props.InductedDateTime | date:"MM/dd/yyyy"}}</p>
+              </div>
+            </div>
+            <!-- <div class="col-sm-3 col-6">
+                    <img [src]="'assets/images/user-icon.png'">
+                    <div class="register-details">
+                        <p>joe bloggs</p>
+                        <p>inducted on 22/7/17</p>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</section>
+<footer>
+    <div class="containerd footer">
+        <div class="support-chat fixed">
+            <i class="fa fa-commenting-o"></i>
+            <span>live support chat</span>
+        </div>
+    </div>
+</footer>

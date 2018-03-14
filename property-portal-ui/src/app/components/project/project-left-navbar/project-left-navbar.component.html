@@ -1,0 +1,21 @@
+<!-- <div class="pro-project-left">
+  <ul>
+    <li *ngFor="let item of leftMenuItems" 
+    [ngClass]="{'background-white': item.isActive}" 
+    class="{{item.css}}"  (click)="openComponent(item)">
+      <a style="cursor:pointer" (click)="openComponent(item)">{{item.title}}</a>
+    </li>
+   
+  </ul>
+</div> -->
+<!-- <div class="project-view"> -->
+<div class="project-icons" style="cursor:pointer">
+  <a *ngFor="let item of leftMenuItems" (click)="openComponent(item)">
+    <div class="{{item.divCss}}">
+      <i class="{{item.css}}" aria-hidden="true"></i>
+      <span>{{item.title}}</span>
+    </div>
+    <hr>
+  </a>
+</div>
+<!-- </div> -->
